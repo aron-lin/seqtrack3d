@@ -1,0 +1,17 @@
+#torch>=2.0.0 
+protobuf>=3.19
+easydict>=1.9
+numpy>=1.20.0
+pandas>=1.1.5
+git+https://github.com/erikwijmans/Pointnet2_PyTorch.git#egg=pointnet2_ops&subdirectory=pointnet2_ops_lib
+pomegranate==0.14.8
+pyquaternion>=0.9.9
+pytorch-lightning==2.0.2
+PyYAML>=5.4.1
+scipy>=1.5.4
+Shapely>=1.7.1
+tdqm>=0.0.1
+tensorboard>=2.4.1
+torchmetrics>=0.4.1
+tqdm>=4.61.1
+nuscenes-devkit>=1.1.9

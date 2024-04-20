@@ -1,0 +1,62 @@
+#data
+dataset: waymo_mf
+# path: Root directory of the prepared Waymo dataset
+path: /your/path
+category_name: Vehicle # [Vehicle, Pedestrian, Cyclist]
+bb_scale: 1.25
+bb_offset: 2
+point_sample_size: 1024
+degrees: False
+coordinate_mode: velodyne
+up_axis: [ 0,0,1 ]
+
+preload_offset: 60
+data_limit_box: True
+train_split: train
+val_split: test
+test_split: test
+train_type: train_motion_mf
+num_candidates: 4
+motion_threshold: 0.15
+use_augmentation: False
+hist_num: 3 # Number of historical frames
+empty_box_limit: 3 # Maximum allowed empty boxes in historical frames.
+limit_num_points_in_prev_box: 1 # A box is considered empty if it contains fewer than this number of points.
+
+
+box_aware: True
+
+tiny: False # for debug only
+
+#model configuration
+net_model: seqtrack3d
+
+#loss configuration
+center_weight: 2
+angle_weight: 10.0
+seg_weight: 0.1
+
+ref_center_weight: 0.2
+ref_angle_weight: 1
+
+bc_weight: 1.0
+motion_cls_seg_weight: 0.1
+
+
+# testing config
+use_z: True
+limit_box: False
+IoU_space: 3
+
+#training
+batch_size: 100
+workers: 10
+epoch: 180
+from_epoch: 0
+lr: 0.0001 
+max_lr: 0.001 # for onecycle learning rate only
+optimizer: Adam
+lr_decay_step: 20
+lr_decay_rate: 0.1
+wd: 0
+gradient_clip_val: 0.0
