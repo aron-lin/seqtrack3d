@@ -1,0 +1,49 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: 当前文件",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "train_seqtrack3D",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--cfg",
+                "cfgs/seqtrack3d_nuscenes.yaml",
+                "--batch_size",  
+                "4",
+                "--epoch",
+                "20",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            },
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "test_seqtrack3D",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "--cfg",
+                "cfgs/seqtrack3d_nuscenes.yaml",
+                "--checkpoint",
+                "/workspace/sot/SeqTrack_dev/seqtrack_nuscenes_car_succ_62_prec_71.ckpt",
+                "--test",
+            ],
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0"
+            },
+            "cwd": "${workspaceFolder}"
+        },
+    ]
+}

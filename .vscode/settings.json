@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/opt/conda/bin/python",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    "python.formatting.provider": "yapf"
+}

@@ -1,0 +1,72 @@
+.DS_Store
+.idea/
+*/.DS_Store
+*.pyc
+events.*
+lightning_logs
+data
+
+# .gitignore
+
+# Ignore object files
+*.o
+*.obj
+
+# # Ignore CUDA files
+# *.cu
+# *.cuh
+
+# Ignore compiled and linked libraries
+*.a
+*.so
+*.dll
+*.dylib
+
+# Ignore build directories
+**build**
+**egg-info**
+**dist**
+**__pycache__**
+# dataset and model
+output/
+data/
+
+# Ignore Python virtual environments
+venv/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Jupyter Notebook files
+*.ipynb_checkpoints/
+*.ipynb
+
+# Ignore other generated files
+*.log
+*.bak
+*.swp
+*.swo
+*.swn
+*.tmp
+*.core
+
+# Ignore IDE and editor folders
+# .vscode/ #vscode有用，暂时不屏蔽
+*.idea/
+*.suo
+*.sln
+*.sdf
+*.db
+*.bak
+#understand
+*.udb  
+*.bin
+
+#debug output
+*.zip
+*.pkl
+*.mp4
+*.png
+*.jpg 
+*.pth
+
